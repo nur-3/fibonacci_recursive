@@ -1,0 +1,5 @@
+c:\users\user\documents\visual studio 2012\Projects\Recursive_fibonacci\Recursive_fibonacci\bin\Debug\Recursive_fibonacci.exe.config
+c:\users\user\documents\visual studio 2012\Projects\Recursive_fibonacci\Recursive_fibonacci\bin\Debug\Recursive_fibonacci.exe
+c:\users\user\documents\visual studio 2012\Projects\Recursive_fibonacci\Recursive_fibonacci\bin\Debug\Recursive_fibonacci.pdb
+c:\users\user\documents\visual studio 2012\Projects\Recursive_fibonacci\Recursive_fibonacci\obj\Debug\Recursive_fibonacci.exe
+c:\users\user\documents\visual studio 2012\Projects\Recursive_fibonacci\Recursive_fibonacci\obj\Debug\Recursive_fibonacci.pdb
