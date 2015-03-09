@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace selectionSort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            
+            Console.WriteLine("eleman sayısı");
+            int n=Convert.ToInt16(Console.ReadLine());
+            int[] dizi=new int[n];
+
+            Random rnd = new Random();
+
+            int sayi1=0, sayi2=0;
+
+              int min, temp;
+              for (int i = 0; i < n - 1; i++)
+             {      
+                min = i;
+                for (int j = i + 1; j < n; j++)
+                {
+                   sayi1++;
+                  if (dizi[j] < dizi[min])
+                  { 
+                      min = j;
+                      sayi2++;
+                   }
+                }
+                 temp = dizi[i];
+                  dizi[i] = dizi[min];
+                  dizi[min] = temp;
+     }
+
+            Console.WriteLine("{0},{1}",sayi1,sayi2);
+            Console.ReadLine();
+        }
+        }
+    }
+
