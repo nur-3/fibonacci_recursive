@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ShellSort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            Console.WriteLine("eleman sayısı");
+            int n = Convert.ToInt16(Console.ReadLine());
+            int[] dizi = new int[n];
+
+            Random rnd = new Random();
+
+            int com1 = 0; //comporo.
+            int swap = 0; // swap
+            
+
+            for (int m = 0; m < n; m++)
+            {
+                dizi[m] = rnd.Next(1, 50);
+            }
+
+
+
+            int j;
+            int temporary;
+            int gap = n / 2;
+
+            
+            while (gap > 0)
+            {
+                for (int i = gap; i < n; i++)
+                {
+                    com1++;
+
+
+                    temporary = dizi[i];
+                    j = i;
+                    while (j >= gap && dizi[j - gap] > temporary)
+                    {
+                        swap++;
+                        com1++;
+
+                        dizi[j] = dizi[j - gap];
+                        j -= gap;
+                    }
+                    dizi[j] = temporary;
+
+                   
+
+                }
+                gap = gap / 2;
+            }
+
+            Console.WriteLine("{0},{1}", com1,swap);
+            Console.ReadLine();
+        }
+    }
+}
