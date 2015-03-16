@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace insertionSort
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("eleman sayısı");
+            int n = Convert.ToInt16(Console.ReadLine());
+            int[] dizi = new int[n];
+
+            Random rnd = new Random();
+
+            int sayi1 = 0, sayi2 = 0;
+
+            for (int m = 0; m < n; m++)
+            {
+                dizi[m] = rnd.Next(1, 50);
+
+            }
+
+          
+
+            for (int j = 1; j < n; j++)
+            {
+                int key = dizi[j];
+                int i = j - 1;
+
+                sayi1++;
+
+                while (i >= 0 && dizi[i] > key)
+                {
+                    sayi2++;
+                    sayi1++;
+                    dizi[i + 1] = dizi[i];
+                    i = i - 1;
+                }
+                dizi[i + 1] = key;
+            }
+
+            Console.WriteLine("{0},{1}", sayi1, sayi2);
+            Console.ReadLine();
+            
+        }
+    }
+}
