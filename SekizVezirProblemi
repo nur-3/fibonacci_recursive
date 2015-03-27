@@ -1,0 +1,106 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vezir;
+
+import java.util.Random;
+
+/**
+ *
+ * @author UseR
+ */
+public class Vezir {
+    
+   static public void Create(){
+     int i;
+     int [][] matris=new int[8][8];
+     int sayi=0;
+     
+     for(int j=0;j<8;j++){
+         Random rnd=new Random();
+         i=rnd.nextInt(8);
+         matris[i][j]=1 ;
+     }
+     for(int k=0;k<8;k++){
+      for(int m=0;m<8;m++){
+          System.out.print(matris[k][m]+" ");
+      }
+         System.out.println();
+     
+     }
+       sayi=Cakisma(matris);
+       System.out.println(sayi+"");
+   }
+   
+   static public int Cakisma(int matris[][]){
+    int temp=0;
+    int satir,sutun;
+    for(int i=0;i<8;i++)
+    {
+     for(int j=0;j<8;j++)
+     {
+      satir=i;
+      sutun=j;
+
+    //çapraz tarama
+      while(satir!=0&&sutun!=0){
+        if(matris[satir][sutun]==1){
+          if(matris[i][j]==1){
+            temp++;
+          }
+        
+        }
+        
+        satir--;
+        sutun--;
+     }
+     satir=i;
+     sutun=j;
+     while(satir!=8&&sutun!=8){
+       if(matris[satir][sutun]==1){
+         if(matris[i][j]==1){
+           temp++;
+         }
+       }
+       satir++;
+       sutun++;
+     }
+     satir=i;
+     sutun=j;
+     while(satir!=0&&sutun!=8){
+       if(matris[satir][sutun]==1){
+         if(matris[i][j]==1){
+           temp++;
+         }
+         
+          
+       }
+       satir--;
+       sutun++;
+    }
+    satir=i;
+    sutun=j;
+   while(satir!=8&&sutun!=0){
+        if(matris[satir][sutun]==1){
+          if(matris[i][j]==1){
+              temp++;
+          }
+          
+            
+        }
+        satir++;
+        sutun--;
+   }
+//-----------
+    
+  }
+ }
+   return temp;
+}
+
+    
+    public static void main(String[] args) {
+        Create();
+    }
+}
